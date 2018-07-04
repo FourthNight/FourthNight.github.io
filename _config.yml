@@ -188,3 +188,9 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+pageview:
+  provider: leancloud
+  leancloud:
+    app_id    : "h9kpeTA1Y2yyw86OQUiOaMnU-gzGzoHsz"
+    app_key   : "fFXbFETFYajpL77R4L9AFnoT"
+    app_class : "test"
