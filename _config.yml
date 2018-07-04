@@ -104,7 +104,7 @@ sources: # bootcdn (default), unpkg
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "custom"
 
   ## Disqus
   disqus:
@@ -113,12 +113,12 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
+    clientID    : 03b28e54c2b68ffe63e9 # GitHub Application Client ID
+    clientSecret: affa0d641f33f4e82ad68ec543211132da3fded5 # GitHub Application Client Secret
+    repository  : fourthnight.github.io # GitHub repo
+    owner       : fourthnight # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - your GitHub Id
+      # - fourthnight
 
 
 ## => Pageview
