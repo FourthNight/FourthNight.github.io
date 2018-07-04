@@ -118,7 +118,7 @@ comments:
     repository  : fourthnight.github.io # GitHub repo
     owner       : fourthnight # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - fourthnight
+       - fourthnight
 
 
 ## => Pageview
