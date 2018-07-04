@@ -1,4 +1,4 @@
-header:
+﻿header:
   - titles:
       en:       Archive
       zh:       归档
@@ -7,7 +7,7 @@ header:
     url:        /archive.html
   - titles:
       en:       About
-      zh:       关于
+      zh:       百度
       zh-Hans:  关于
       zh-Hant:  關於
-    url:        /about.html
+    url:        www.baidu.com
