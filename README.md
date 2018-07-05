@@ -1,4 +1,4 @@
-﻿# [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
+# [TeXt Theme](https://github.com/kitian616/jekyll-TeXt-theme)
 
 [![Gem Version](https://img.shields.io/gem/v/jekyll-text-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/releases)
 [![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
@@ -73,6 +73,3 @@ You can choose these 6 built-in skins below:
 ## License
 
 TeXt Theme is [MIT licensed](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE).
-
-![download](https://github.com/FourthNight/FourthNight.github.io/blob/master/pics/test.jpg)
-
