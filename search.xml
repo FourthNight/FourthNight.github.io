@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>exploration geophysics II</title>
+      <link href="/2024/03/12/exploration-geophysics-II/"/>
+      <url>/2024/03/12/exploration-geophysics-II/</url>
+      
+        <content type="html"><![CDATA[<h3 id="地震勘探"><a href="#地震勘探" class="headerlink" title="地震勘探"></a>地震勘探</h3><p>观测和研究</p><pre class="mermaid">flowchart LR    人工激发地震 --> 地下介质中传播 --> 遇弹性界面返回 --> 仪器接收 --> 地震记录 --> 处理解释 --> 了解地下介质</pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 地球物理勘探基础 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>地球物理勘探基础（一）</title>
       <link href="/2024/03/12/exploration-geophysics/"/>
       <url>/2024/03/12/exploration-geophysics/</url>
