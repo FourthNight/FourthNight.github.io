@@ -4,16 +4,16 @@
   
     
     <entry>
-      <title>����������̽</title>
+      <title>地球物理勘探</title>
       <link href="/2024/03/12/exploration-geophysics/"/>
       <url>/2024/03/12/exploration-geophysics/</url>
       
-        <content type="html"><![CDATA[<h3 id="��̽��������"><a href="#��̽��������" class="headerlink" title="��̽��������"></a>��̽��������</h3><p>����<strong>������</strong>��<strong>Χ��</strong>���������ϵĲ��죬�����¿�̽������      </p><ul><li>������̽��</li><li>�編��̽</li><li>�ŷ�̽��</li><li>���𷨿�̽���˹�����</li></ul><p>��Ȼ����������Χ����ĳ<strong>������</strong>�ϵ�<strong>����Խ��</strong>�����ø���������Ӧ�ķ�������<strong>��̽Ч����Խ��</strong>����֮<strong>����ԽС</strong>��<strong>Ч����Խ��</strong>��<strong>����</strong>��̽���ڱ�������Χ�ҵ�<strong>�ܶȲ���</strong>��<strong>����</strong>�����ǻ���<strong>���迹����</strong>����Щ��̽��������ͨ������ֵ������źŷ���Ա�������Ϣ�������ķ��������ڵ��͵ķ��ݷ�����</p><p>���ݷ������������ص㣨��������ݷ�������        </p><ul><li>��ⷶΧ��</li><li>���ȵ�</li></ul><p>��̽�У��꾮ȡ���������ݷ���������������ص㣺        </p><ul><li>��ⷶΧС</li><li>���ȸ�</li></ul>]]></content>
+        <content type="html"><![CDATA[<h3 id="勘探方法分类"><a href="#勘探方法分类" class="headerlink" title="勘探方法分类"></a>勘探方法分类</h3><p>根据<strong>被测物</strong>与<strong>围岩</strong>在物理量上的差异，有以下勘探方法：      </p><ul><li>重力法探勘</li><li>电法勘探</li><li>磁法探勘</li><li>地震法勘探（人工地震）</li></ul><p>显然，被测物与围岩在某<strong>物理量</strong>上的<strong>差异越大</strong>，利用该物理量对应的方法进行<strong>勘探效果就越好</strong>，反之<strong>差异越小</strong>，<strong>效果就越差</strong>。<strong>重力</strong>勘探基于被测物与围岩的<strong>密度差异</strong>，<strong>地震</strong>法则是基于<strong>波阻抗差异</strong>。这些勘探方法都是通过测量值或测量信号反向对被测物信息进行求解的方法，属于典型的反演方法。</p><p>反演方法具有以下特点（相比于正演方法）：        </p><ul><li>检测范围大</li><li>精度低</li></ul><p>勘探中，钻井取样属于正演方法，其具有以下特点：        </p><ul><li>检测范围小</li><li>精度高</li></ul>]]></content>
       
       
       <categories>
           
-          <category> ����������̽���� </category>
+          <category> 地球物理勘探基础 </category>
           
       </categories>
       
