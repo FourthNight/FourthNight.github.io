@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>叠合板的刚度、阻尼计算与Lisa法</title>
+      <link href="/2024/03/11/%E6%B5%8B%E8%AF%95/"/>
+      <url>/2024/03/11/%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="叠合层的刚度矩阵"><a href="#叠合层的刚度矩阵" class="headerlink" title="叠合层的刚度矩阵"></a>叠合层的刚度矩阵</h3><p>当波沿着<strong>正交各向异性板主轴</strong>传播时，<strong>刚度矩阵</strong>可为：</p><div align=center><img src="/image/stiffness_matrix.png" width="25%" height="25%"></div><p>使用变换矩阵处理：</p><div align=center><img src="/image/stiffness_matrix_trans_eq.png" width="12%" height="12%"></div><div align=center><img src="/image/stiffness_matrix_trans_expression.png" width="25%" height="25%"></div><p>其中变换矩阵为：</p><div align=center><img src="/image/Trans_matrix.png" width="50%" height="50%"></div><h3 id="叠合层的粘度矩阵"><a href="#叠合层的粘度矩阵" class="headerlink" title="叠合层的粘度矩阵"></a>叠合层的粘度矩阵</h3><p><strong>引入粘度矩阵来描述阻尼</strong></p><p>和刚度矩阵的情况类似，一旦堆叠方向不在坐标轴方向，就需要对粘度矩阵进行处理：</p><div align=center><img src="/image/vis_trans.png" width="40%" height="40%"></div><p>旋转矩阵为：</p><div align=center><img src="/image/Trans_matrix.png" width="50%" height="50%"></div><p>总的位移值可以拆分为刚度部分和阻尼部分的和，最终的有限差分法在阻尼部分的迭代方程可见<a href="https://iopscience.iop.org/article/10.1088/0964-1726/25/9/095021">点此跳转文献链接</a></p><div align=center><img src="/image/w_al_div.png" width="30%" height="30%"></div><h3 id="压电传感器和结构的耦合作用"><a href="#压电传感器和结构的耦合作用" class="headerlink" title="压电传感器和结构的耦合作用"></a>压电传感器和结构的耦合作用</h3><p>使用ANSYS对PZT传感器以及一小片带有无反射边界（<em>NRB</em>）叠合板进行建模，并通过 frequency domain harmonic analysis获得频域响应（位移）：</p><div align=center><img src="/image/FEM_PZT_plate.png" width="50%" height="50%"></div><p>记频域响应为：</p><div align=center><img src="/image/res_of_t.png" width="30%" height="30%"></div><p>对实际激励信号进行傅里叶变换并记为 $\tilde{V}(\omega)$ ，则叠合板处在频域上的响应为：</p><div align=center><img src="/image/res_in_freq.png" width="25%" height="25%"></div><p>通过逆变换可得叠合板上由PZT板激励的实际位移：</p><div align=center><img src="/image/res_in_time.png" width="25%" height="25%"></div><div align=center><img src="/image/disp_dist_in_plate.png" width="50%" height="50%"></div><p>对于各向异性板，导波的传播方程为：</p><div align=center><img src="/image/wave_und.png" width="30%" height="30%"></div><p>在对上式下标进行简化后，可以写为：</p><div align=center><img src="/image/wave_und2.png" width="18%" height="18%"></div><p>将板结构进行离散化，下方右图中的 $\delta$ 是用来表征立方体中心点在哪一侧的导数。</p><div align=center><img src="/image/FD_cube.png" width="28%" height="28%"><img src="/image/FD_cube2.png" width="30%" height="30%"></div>        <p>则中心单元的二阶偏导有：</p><div align=center><img src="/image/wave_der_2.png" width="40%" height="40%"></div>其中：<div align=center><img src="/image/wave_der_1.png" width="20%" height="20%"></div><p>对应原先边长为 $\delta$ 的小立方体的边界的的一阶偏导有：</p><div align=center><img src="/image/wave_der_1t.png" width="23%" height="23%"></div><div align=center><img src="/image/FD_cube3.png" width="27%" height="27%"></div><p>通过下式可将上式中的位移分量转化为应力分量：</p><div align=center><img src="/image/w2stress.png" width="13%" height="13%"></div><p>从而可以使用上中心点处的剪应力连续条件：</p><div align=center><img src="/image/shear_stress_continue.png" width="19%" height="19%"></div><p>其中， $\rho&#x3D;1,2,3$ 。</p><p>最终的三个位移分量的有限差分法迭代方程可见（太长了）：<br><a href="https://link.springer.com/article/10.1007/s13272-012-0061-9">点此跳转文献链接</a></p><p>此外，应当满足约束：</p><div align=center><img src="/image/constraint.png" width="22%" height="22%"></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 有限元计算 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2024/03/11/hello-world/"/>
+      <url>/2024/03/11/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
