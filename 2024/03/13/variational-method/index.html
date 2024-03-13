@@ -23,8 +23,37 @@ html.dataset.dark = localStorage.dark;
 <p>且</p>
 <p>$$\eta(a)&#x3D;\eta(b)&#x3D;\xi(a)&#x3D;\xi(b)，$$</p>
 <p>则有$M(x)&#x3D;N(x)&#x3D;0$。</p>
-<h3 id="泛函极值问题"><a href="#泛函极值问题" class="headerlink" title="泛函极值问题"></a>泛函极值问题</h3><p>考虑以下形式泛函的极值：</p>
+<h3 id="泛函极值问题"><a href="#泛函极值问题" class="headerlink" title="泛函极值问题"></a>泛函极值问题</h3><p>考虑以下形式泛函的极值问题，假设$y(x)$使得以下表达式的值最大或最小：</p>
 <p>$$I(y(x))&#x3D;\int_{x_1}^{x_2}F(x,y,y’)dx$$</p>
+<p>假设对于一般的$\overline{y}$，有：</p>
+<p>$$\overline{y}&#x3D;y+\epsilon \eta$$</p>
+<p>其中，$\eta$为任意的一、二阶均可导的函数，且有：</p>
+<p>$$\eta(x_1)&#x3D;\eta(x_2)&#x3D;0$$</p>
+<p>则当$I$取得极值时，其对$\epsilon$的导数为0（参考函数极值问题），并且$\overline{y}&#x3D;y$。因此，有：</p>
+<p>$$\frac{dI(\overline{y}(x))}{d\epsilon}|<em>{\epsilon&#x3D;0}&#x3D;\int</em>{x_1}^{x_2} \frac{dF(x,y+\epsilon \eta,y’+\epsilon \eta’)}{d\epsilon}|_{\epsilon &#x3D;0}dx&#x3D;0$$</p>
+<p>其中，</p>
+<p>$$\frac{dF(x,y+\epsilon \eta,y’+\epsilon \eta’)}{d\epsilon}|<em>{\epsilon &#x3D;0}&#x3D;{F_y}(x,y,y’) \eta+F</em>{y’}(x,y,y’) \eta’$$</p>
+<p>因此，有</p>
+<p>$$\int_{x_1}^{x_2}{F_y}(x,y,y’) \eta+F_{y’}(x,y,y’) \eta’dx&#x3D;0$$</p>
+<p>其中，第二项</p>
+<p>$$\int_{x_1}^{x_2}F_{y’}(x,y,y’) \eta’dx&#x3D;\int_{x_1}^{x_2}F_{y’}(x,y,y’) d\eta$$</p>
+<p>$$\int_{x_1}^{x_2}F_{y’}(x,y,y’) \eta’dx&#x3D;[F_{y’}\eta]|<em>{x_1}^{x_2}-\int</em>{x_1}^{x_2}\frac{dF_{y’}}{dx}\eta dx$$</p>
+<p>由于$\eta(x_1)&#x3D;\eta(x_2)&#x3D;0$</p>
+<p>$$\int_{x_1}^{x_2}F_{y’}(x,y,y’) \eta’dx&#x3D;-\int_{x_1}^{x_2}\frac{dF_{y’}}{dx}\eta dx$$</p>
+<p>因此，有</p>
+<p>$$\int_{x_1}^{x_2}[{F_y}(x,y,y’) -\frac{dF_{y’}}{dx}]\eta dx&#x3D;0$$</p>
+<p>有变分法预备定理可知：</p>
+<p>$${F_y}(x,y,y’) -\frac{dF_{y’}}{dx}&#x3D;0$$</p>
+<p>此时，得到欧拉方程的形式一。</p>
+<p>下面对形式二进行推导：</p>
+<p>$$\frac{dF(x,y,y’)}{dx}&#x3D;F_{x}+y’F_{y}+y’’F_{y’}$$</p>
+<p>$$\frac{d}{dx}{(y’F_{y’})}&#x3D;y’’{F_{y’}}+y’\frac{dF_{y’}}{dx}$$</p>
+<p>把上上式中的$y’’{F_{y’}}$代入上式中：</p>
+<p>$$\frac{d}{dx}{(y’F_{y’})}&#x3D;\frac{dF}{dx}-F_{x}-y’F_{y}+y’\frac{dF_{y’}}{dx}$$</p>
+<p>$$F_x-\frac{d}{dx}(F-y’F_{y’})&#x3D;-y’F_{y}+y’\frac{dF_{y’}}{dx}$$</p>
+<p>由欧拉方程的形式一可知，上式右部分为0，因此有：</p>
+<p>$$F_x-\frac{d}{dx}(F-y’F_{y’})&#x3D;0$$</p>
+<p>由此得到欧拉方程的形式二。</p>
 </div><div class="tags"></div><div class="post-nav"><a class="next" href="/2024/03/12/exploration-geophysics-II/">地球物理勘探基础（二）</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="author-info"><a class="info-avatar" href="/about/" title="关于"><img class="nofancybox" src="/img/8522289.png"/></a><p>薛事成的博客</p><a class="info-icon" href="mailto:xueshichengby@outlook.com" title="Email" target="_blank" style="margin-inline:5px"> <i class="fa fa-envelope-square" style="margin-inline:5px"></i></a><a class="info-icon" href="https://github.com/FourthNight" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8F%98%E5%88%86%E6%B3%95/">变分法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9C%B0%E7%90%83%E7%89%A9%E7%90%86%E5%8B%98%E6%8E%A2%E5%9F%BA%E7%A1%80/">地球物理勘探基础</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%89%E9%99%90%E5%85%83%E8%AE%A1%E7%AE%97/">有限元计算</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2024/03/13/variational-method/">变分法基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/03/12/exploration-geophysics-II/">地球物理勘探基础（二）</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/03/12/exploration-geophysics/">地球物理勘探基础（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/03/11/%E6%B5%8B%E8%AF%95/">叠合板的刚度、阻尼计算与Lisa法</a></li><li class="post-list-item"><a class="post-list-link" href="/2024/03/11/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2024 <a href="/." rel="nofollow">搬山猿.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0"></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=1.0.0"><script type="text/javascript" src="/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
 if (search_path.length == 0) {
   search_path = 'search.xml';
