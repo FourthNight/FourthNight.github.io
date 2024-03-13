@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>��ַ�����</title>
+      <link href="/2024/03/13/variational-method/"/>
+      <url>/2024/03/13/variational-method/</url>
+      
+        <content type="html"><![CDATA[<h3 id="��ַ�Ԥ������"><a href="#��ַ�Ԥ������" class="headerlink" title="��ַ�Ԥ������"></a>��ַ�Ԥ������</h3><p>��������$h(x)$����$\int_a^b{M(x)h(x)dx}&#x3D;0$����$h(a)&#x3D;h(b)&#x3D;0$,��$M(x)&#x3D;0$��</p><p>֤��</p><p>��Ϊ$h(x)$Ϊ���⺯����ȡ$h(x)&#x3D;-M(x)(x-a)(x-b)$,��$M(x)h(x)&#x3D;-M^{2}(x)(x-a)(x-b)$����Ϊ$-(x-a)(x-b)\geq0$,������ʹ$\int_a^b{M(x)h(x)dx}&#x3D;\int_a^bM^{2}(x)[-(x-a)(x-b)]dx&#x3D;0$������Ҫ��$M^{2}(x)&#x3D;0$����$M(x)&#x3D;0$��</p><p>ͬ���ģ���������$\eta(x)$,$\xi(x)$����$\int_a^b{[M(x)\eta(x)+N(x)\xi(x)]dx}&#x3D;0$����$\eta(a)&#x3D;\eta(b)&#x3D;\xi(a)&#x3D;\xi(b)$������$M(x)&#x3D;N(x)&#x3D;0$��</p><h3 id="������ֵ����"><a href="#������ֵ����" class="headerlink" title="������ֵ����"></a>������ֵ����</h3><p>����������ʽ�����ļ�ֵ��</p><p>$$I(y(x))&#x3D;\int_{x_1}^{x_2}F(x,y,y’)dx$$</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ��ַ� </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>地球物理勘探基础（二）</title>
       <link href="/2024/03/12/exploration-geophysics-II/"/>
       <url>/2024/03/12/exploration-geophysics-II/</url>
