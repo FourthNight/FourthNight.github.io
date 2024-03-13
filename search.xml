@@ -4,16 +4,16 @@
   
     
     <entry>
-      <title>��ַ�����</title>
+      <title>变分法基础</title>
       <link href="/2024/03/13/variational-method/"/>
       <url>/2024/03/13/variational-method/</url>
       
-        <content type="html"><![CDATA[<h3 id="��ַ�Ԥ������"><a href="#��ַ�Ԥ������" class="headerlink" title="��ַ�Ԥ������"></a>��ַ�Ԥ������</h3><p>��������$h(x)$����$\int_a^b{M(x)h(x)dx}&#x3D;0$����$h(a)&#x3D;h(b)&#x3D;0$,��$M(x)&#x3D;0$��</p><p>֤��</p><p>��Ϊ$h(x)$Ϊ���⺯����ȡ$h(x)&#x3D;-M(x)(x-a)(x-b)$,��$M(x)h(x)&#x3D;-M^{2}(x)(x-a)(x-b)$����Ϊ$-(x-a)(x-b)\geq0$,������ʹ$\int_a^b{M(x)h(x)dx}&#x3D;\int_a^bM^{2}(x)[-(x-a)(x-b)]dx&#x3D;0$������Ҫ��$M^{2}(x)&#x3D;0$����$M(x)&#x3D;0$��</p><p>ͬ���ģ���������$\eta(x)$,$\xi(x)$����$\int_a^b{[M(x)\eta(x)+N(x)\xi(x)]dx}&#x3D;0$����$\eta(a)&#x3D;\eta(b)&#x3D;\xi(a)&#x3D;\xi(b)$������$M(x)&#x3D;N(x)&#x3D;0$��</p><h3 id="������ֵ����"><a href="#������ֵ����" class="headerlink" title="������ֵ����"></a>������ֵ����</h3><p>����������ʽ�����ļ�ֵ��</p><p>$$I(y(x))&#x3D;\int_{x_1}^{x_2}F(x,y,y’)dx$$</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="变分法预备定理"><a href="#变分法预备定理" class="headerlink" title="变分法预备定理"></a>变分法预备定理</h3><p>若对任意$h(x)$，有$\int_a^b{M(x)h(x)dx}&#x3D;0$，且$h(a)&#x3D;h(b)&#x3D;0$,则$M(x)&#x3D;0$。</p><p>证：</p><p>因为$h(x)$为任意函数，取$h(x)&#x3D;-M(x)(x-a)(x-b)$,则$M(x)h(x)&#x3D;-M^{2}(x)(x-a)(x-b)$。因为$-(x-a)(x-b)\geq0$,所以若使$\int_a^b{M(x)h(x)dx}&#x3D;\int_a^bM^{2}(x)[-(x-a)(x-b)]dx&#x3D;0$，必须要求$M^{2}(x)&#x3D;0$，即$M(x)&#x3D;0$。</p><p>同样的，对于任意$\eta(x)$,$\xi(x)$，有$\int_a^b{[M(x)\eta(x)+N(x)\xi(x)]dx}&#x3D;0$，且$\eta(a)&#x3D;\eta(b)&#x3D;\xi(a)&#x3D;\xi(b)$，则有$M(x)&#x3D;N(x)&#x3D;0$。</p><h3 id="泛函极值问题"><a href="#泛函极值问题" class="headerlink" title="泛函极值问题"></a>泛函极值问题</h3><p>考虑以下形式泛函的极值：</p><p>$$I(y(x))&#x3D;\int_{x_1}^{x_2}F(x,y,y’)dx$$</p>]]></content>
       
       
       <categories>
           
-          <category> ��ַ� </category>
+          <category> 变分法 </category>
           
       </categories>
       
