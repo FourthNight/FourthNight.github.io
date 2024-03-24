@@ -10,13 +10,14 @@ html.dataset.dark = localStorage.dark;
 });</script><meta name="generator" content="Hexo 7.1.1"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">ADA</h1><a id="logo" href="/.">搬山猿</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">ADA</h1><div class="post-meta">2024-03-23<span> | </span><span class="category"><a href="/categories/GAN/">GAN</a></span></div><div class="post-content"><h3 id="Adaptive-Discriminator-Augmentation-ADA"><a href="#Adaptive-Discriminator-Augmentation-ADA" class="headerlink" title="Adaptive Discriminator Augmentation(ADA)"></a>Adaptive Discriminator Augmentation(ADA)</h3><ul>
 <li>避免手动调整增强强度, 根据过拟合程度动态控制它</li>
 <li>量化过拟合的标准方法：使用一个单独的验证集，并观察其相对于训练集的行为</li>
+</ul>
+<span id="more"></span>
+<ul>
 <li>在N个连续的小批次上的平均值表示为$E[·]$</li>
 </ul>
 <p>$$r_v &#x3D; \frac{E[D_{train}]-E[D_{validation}]}{E[D_{train}]-E[D_{generated}]}$$</p>
 <p>$$r_t &#x3D; E[\mathsf{sign}(D_{train})]$$</p>
 <p>对于$r_v$和$r_t$来说，值为0时是没有过拟合，值为1时是完全过拟合。</p>
-<span id="more"></span>
-
 <ul>
 <li><p>调整增强概率p以使选定的指标($r_v$或$r_t$)匹配适当的目标值。</p>
 </li>
