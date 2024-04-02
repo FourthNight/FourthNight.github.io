@@ -7,8 +7,25 @@ html.dataset.dark = localStorage.dark || prefersDarkMode.matches;
 toggle.addEventListener('click', () => {
 localStorage.dark = !(html.dataset.dark == 'true');
 html.dataset.dark = localStorage.dark;
-});</script><meta name="generator" content="Hexo 7.1.1"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">山猿</h1><a id="logo" href="/.">山猿</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"><a href="/2024/04/02/GPR-FWI-NN/">探地雷达全波反演</a></h1><div class="post-meta">2024-04-02</div><div class="post-content">A Machine Learning-Based Fast-Forward Solver for Ground Penetrating Radar With Application to Full-Waveform InversionIEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING
-使用神经网络建立正向模型...</div><p class="readmore"><a href="/2024/04/02/GPR-FWI-NN/">阅读全文</a></p></div><div class="post"><h1 class="post-title"><a href="/2024/04/01/MATLAB-ticks/">MATLAB 备忘录</a></h1><div class="post-meta">2024-04-01</div><div class="post-content"><p>最近只能记得七秒内的东西，七秒外的东西要在此记录一下！</p>
+});</script><meta name="generator" content="Hexo 7.1.1"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">山猿</h1><a id="logo" href="/.">山猿</a><p class="description"></p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"><a href="/2024/04/02/GPR-FWI-NN/">探地雷达全波反演</a></h1><div class="post-meta">2024-04-02</div><div class="post-content"><h4 id="A-Machine-Learning-Based-Fast-Forward-Solver-for-Ground-Penetrating-Radar-With-Application-to-Full-Waveform-Inversion"><a href="#A-Machine-Learning-Based-Fast-Forward-Solver-for-Ground-Penetrating-Radar-With-Application-to-Full-Waveform-Inversion" class="headerlink" title="A Machine Learning-Based Fast-Forward Solver for Ground Penetrating Radar With Application to Full-Waveform Inversion"></a>A Machine Learning-Based Fast-Forward Solver for Ground Penetrating Radar With Application to Full-Waveform Inversion</h4><p><em>IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING</em></p>
+<p>使用神经网络建立正向模型，输入为：      </p>
+<ul>
+<li>Water fraction of the concrete ($WC$). 含水率</li>
+<li>Radius of the rebar ($R$). 钢筋半径</li>
+<li>Depth of the rebar ($D$). 埋深</li>
+</ul>
+<p>输出为测点处探地雷达信号。通过优化算法匹配探地雷达信号和网络输出，得到输入，完成全波反演。</p>
+<h4 id="GPR-Full-Waveform-Inversion-With-Deep-Learning-Forward-Modeling-A-Case-Study-From-Non-Destructive-Testing"><a href="#GPR-Full-Waveform-Inversion-With-Deep-Learning-Forward-Modeling-A-Case-Study-From-Non-Destructive-Testing" class="headerlink" title="GPR Full-Waveform Inversion With Deep-Learning Forward Modeling: A Case Study From Non-Destructive Testing"></a>GPR Full-Waveform Inversion With Deep-Learning Forward Modeling: A Case Study From Non-Destructive Testing</h4><p><em>IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING</em></p>
+<p>上一篇针对<em>A-scan</em>，这里能够<em>B-scan</em>了。</p>
+<p>同样使用神经网络模型，输入为：</p>
+<ul>
+<li>the water fraction ($MC$) 含水率</li>
+<li>the diameter ($R$) 钢筋直径</li>
+<li>depth ($D$) 埋深</li>
+<li>position ($X$) 位置</li>
+</ul>
+<p>显然，输入比上面多了一个位置$X$，对于<em>B-scan</em>信号能够给出位置信息了。</p>
+<p>同样的用优化算法匹配，获得输入的值，完成全波反演。</p></div><p class="readmore"><a href="/2024/04/02/GPR-FWI-NN/">阅读全文</a></p></div><div class="post"><h1 class="post-title"><a href="/2024/04/01/MATLAB-ticks/">MATLAB 备忘录</a></h1><div class="post-meta">2024-04-01</div><div class="post-content"><p>最近只能记得七秒内的东西，七秒外的东西要在此记录一下！</p>
 <h5 id="大文件存储mat"><a href="#大文件存储mat" class="headerlink" title="大文件存储mat"></a>大文件存储<code>mat</code></h5><p>当要存储的<code>mat</code>文件过大时：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">save(path , ‘X_all’ ,’-v7<span class="number">.3</span>’ )</span><br></pre></td></tr></table></figure>
 
