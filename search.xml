@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>探地雷达全波反演</title>
+      <link href="/2024/04/02/GPR-FWI-NN/"/>
+      <url>/2024/04/02/GPR-FWI-NN/</url>
+      
+        <content type="html"><![CDATA[<h4 id="A-Machine-Learning-Based-Fast-Forward-Solver-for-Ground-Penetrating-Radar-With-Application-to-Full-Waveform-Inversion"><a href="#A-Machine-Learning-Based-Fast-Forward-Solver-for-Ground-Penetrating-Radar-With-Application-to-Full-Waveform-Inversion" class="headerlink" title="A Machine Learning-Based Fast-Forward Solver for Ground Penetrating Radar With Application to Full-Waveform Inversion"></a>A Machine Learning-Based Fast-Forward Solver for Ground Penetrating Radar With Application to Full-Waveform Inversion</h4><p><em>IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING</em></p><p>使用神经网络建立正向模型，输入为：      </p><ul><li>Water fraction of the concrete ($WC$). 含水率</li><li>Radius of the rebar ($R$). 钢筋半径</li><li>Depth of the rebar ($D$). 埋深</li></ul><p>输出为测点处探地雷达信号。通过优化算法匹配探地雷达信号和网络输出，得到输入，完成全波反演。</p><h4 id="GPR-Full-Waveform-Inversion-With-Deep-Learning-Forward-Modeling-A-Case-Study-From-Non-Destructive-Testing"><a href="#GPR-Full-Waveform-Inversion-With-Deep-Learning-Forward-Modeling-A-Case-Study-From-Non-Destructive-Testing" class="headerlink" title="GPR Full-Waveform Inversion With Deep-Learning Forward Modeling: A Case Study From Non-Destructive Testing"></a>GPR Full-Waveform Inversion With Deep-Learning Forward Modeling: A Case Study From Non-Destructive Testing</h4><p><em>IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING</em></p><p>上一篇针对<em>A-scan</em>，这里能够<em>B-scan</em>了。</p><p>同样使用神经网络模型，输入为：</p><ul><li>the water fraction ($MC$) 含水率</li><li>the diameter ($R$) 钢筋直径</li><li>depth ($D$) 埋深</li><li>position ($X$) 位置</li></ul><p>显然，输入比上面多了一个位置$X$，对于<em>B-scan</em>信号能够给出位置信息了。</p><p>同样的用优化算法匹配，获得输入的值，完成全波反演。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> FWI </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MATLAB 备忘录</title>
       <link href="/2024/04/01/MATLAB-ticks/"/>
       <url>/2024/04/01/MATLAB-ticks/</url>
