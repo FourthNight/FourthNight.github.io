@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>EMD</title>
+      <link href="/2024/04/13/EMD/"/>
+      <url>/2024/04/13/EMD/</url>
+      
+        <content type="html"><![CDATA[<h4 id="EMD距离"><a href="#EMD距离" class="headerlink" title="EMD距离"></a>EMD距离</h4><p>假设要把$Q$处的方块排列移动成$P$处模样。</p><div align=center><img src="/image/EMD_1.png" width="80%" height="80%"></div><p>Def:</p><p>$d_{i,j}$为将方块从$Q$处的第$i$堆移动到$P$处的第$j$堆途经的距离。<br>$f_{i,j}$为从$Q$处第$i$堆移动到$P$处第$j$堆的方块的数量。</p><p>作出如下约束条件：<br>$f_{i,j}&gt;0$ 每次移动正数数量的方块<br>$\sum_{j&#x3D;1}^{N}f_{i,j}&lt;&#x3D;q_{i}$，$\sum_{j&#x3D;1}^{N}f_{i,j}$为从$Q$中$i$处移动到$P$各处的方块量，显然不能超过$Q$中$i$处本来就有的量<br>$\sum_{i&#x3D;1}^{N}f_{i,j}&lt;&#x3D;p_{i}$，$\sum_{i&#x3D;1}^{N}f_{i,j}$为从$Q$中各处移动到$P$种$j$处的方块量，显然不需要超过$P$中$j$处本来就有的量。(假设方块只从$Q$运到$P$处，不在$P$内部进行搬运)</p><p>定义优化问题：</p><p>$$\mathop{\argmin} \limits_{F &#x3D; f_{i,j}} d_{i,j}f_{i,j} $$</p><p>$s.t.$</p><p>$$ f_{i,j}&gt;0$$</p><p>$$\sum_{j&#x3D;1}^{N}f_{i,j}&lt;&#x3D;q_{i}$$</p><p>$$\sum_{i&#x3D;1}^{M}f_{i,j}&lt;&#x3D;p_{i}$$</p><p>假设存在一个$F$使得约束的$(2)$与$(3)$式可以取等号，且令：       </p><p>$$\sum_{j&#x3D;1}^{M}p_{i} &#x3D; \sum_{j&#x3D;1}^{M}q_{i} &#x3D; 1$$</p><p>显然$\sum_{j&#x3D;1}^{M}p_{i} &#x3D; \sum_{j&#x3D;1}^{M}q_{i}&#x3D;\sum_{i&#x3D;1}^{M}(\sum_{j&#x3D;1}^{N}f_{i,j})$是自动成立的，现在取为$1$后，$q_{i}$、$p_{i}$和$ f_{i,j}$有了概率的表述。</p><p>下面定义$EMD$距离：</p><p>$$l_{1}(u,v)&#x3D;\mathop{\inf} \limits_{\pi \in \Gamma(u,v)} \int_{\Re \times \Re} \vert x-y \vert d \pi(x,y)$$</p><p>其中，$\Gamma(u,v)$是一个分布组成的集合，其边缘分布为$u(x)$和$v(x)。$</p><p>对比咱改动过后的优化问题</p><p>$$\mathop{\argmin} \limits_{F &#x3D; f_{i,j}} d_{i,j}f_{i,j} $$</p><p>$s.t.$</p><p>$$ f_{i,j}&gt;0$$</p><p>$$\sum_{j&#x3D;1}^{N}f_{i,j}&lt;&#x3D;q_{i}$$</p><p>$$\sum_{i&#x3D;1}^{M}f_{i,j}&lt;&#x3D;p_{i}$$</p><p>$$\sum_{j&#x3D;1}^{M}p_{i} &#x3D; \sum_{j&#x3D;1}^{M}q_{i}&#x3D;\sum_{i&#x3D;1}^{M}[\sum_{j&#x3D;1}^{N}f_{i,j}] &#x3D; 1$$</p><p>是不是就知道为什么$EMD$距离距离被叫做推土机距离了吧。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> GAN </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>探地雷达全波反演</title>
       <link href="/2024/04/02/GPR-FWI-NN/"/>
       <url>/2024/04/02/GPR-FWI-NN/</url>
