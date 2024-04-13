@@ -12,11 +12,12 @@ html.dataset.dark = localStorage.dark;
 <img src="/image/EMD_1.png" width="80%" height="80%">
 </div>		
 
-<p>Def:</p>
-<p>$d_{i,j}$为将方块从$Q$处的第$i$堆移动到$P$处的第$j$堆途经的距离。<br>$f_{i,j}$为从$Q$处第$i$堆移动到$P$处第$j$堆的方块的数量。</p>
-<p>作出如下约束条件：<br>$f_{i,j}&gt;0$ 每次移动正数数量的方块<br>$\sum_{j&#x3D;1}^{N}f_{i,j}&lt;&#x3D;q_{i}$，$\sum_{j&#x3D;1}^{N}f_{i,j}$为从$Q$中$i$处移动到$P$各处的方块量，显然不能超过$Q$中$i$处本来就有的量<br>$\sum_{i&#x3D;1}^{N}f_{i,j}&lt;&#x3D;p_{i}$，$\sum_{i&#x3D;1}^{N}f_{i,j}$为从$Q$中各处移动到$P$种$j$处的方块量，显然不需要超过$P$中$j$处本来就有的量。(假设方块只从$Q$运到$P$处，不在$P$内部进行搬运)</p>
+<p>定义：<br>$d_{i,j}$为将方块从$Q$处的第$i$堆移动到$P$处的第$j$堆途经的距离；<br>$f_{i,j}$为从$Q$处第$i$堆移动到$P$处第$j$堆的方块的数量。</p>
+<p>作出如下约束条件：<br>$f_{i,j}&gt;0$ 每次移动正数数量的方块；<br>$\sum_{j&#x3D;1}^{N}f_{i,j}&lt;&#x3D;q_{i}$，$\sum_{j&#x3D;1}^{N}f_{i,j}$为从$Q$中$i$处移动到$P$各处的方块量，显然不能超过$Q$中$i$处本来就有的量；<br>$\sum_{i&#x3D;1}^{N}f_{i,j}&lt;&#x3D;p_{i}$，$\sum_{i&#x3D;1}^{N}f_{i,j}$为从$Q$中各处移动到$P$种$j$处的方块量，显然不需要超过$P$中$j$处本来就有的量。(假设方块只从$Q$运到$P$处，不在$P$内部进行搬运)</p>
+<span id="more"></span>
+
 <p>定义优化问题：</p>
-<p>$$\mathop{\argmin} \limits_{F &#x3D; f_{i,j}} d_{i,j}f_{i,j} $$</p>
+<p>$$\mathop{\mathsf{argmin}} \limits_{F &#x3D; f_{i,j}} d_{i,j}f_{i,j} $$</p>
 <p>$s.t.$</p>
 <p>$$ f_{i,j}&gt;0$$</p>
 <p>$$\sum_{j&#x3D;1}^{N}f_{i,j}&lt;&#x3D;q_{i}$$</p>
@@ -28,7 +29,7 @@ html.dataset.dark = localStorage.dark;
 <p>$$l_{1}(u,v)&#x3D;\mathop{\inf} \limits_{\pi \in \Gamma(u,v)} \int_{\Re \times \Re} \vert x-y \vert d \pi(x,y)$$</p>
 <p>其中，$\Gamma(u,v)$是一个分布组成的集合，其边缘分布为$u(x)$和$v(x)。$</p>
 <p>对比咱改动过后的优化问题</p>
-<p>$$\mathop{\argmin} \limits_{F &#x3D; f_{i,j}} d_{i,j}f_{i,j} $$</p>
+<p>$$\mathop{\mathsf{argmin}} \limits_{F &#x3D; f_{i,j}} d_{i,j}f_{i,j} $$</p>
 <p>$s.t.$</p>
 <p>$$ f_{i,j}&gt;0$$</p>
 <p>$$\sum_{j&#x3D;1}^{N}f_{i,j}&lt;&#x3D;q_{i}$$</p>
