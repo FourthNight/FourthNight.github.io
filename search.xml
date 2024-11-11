@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>WGAN-GP备忘录</title>
+      <link href="/2024/11/07/WGAN-GP-READ/"/>
+      <url>/2024/11/07/WGAN-GP-READ/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Wasserstein-distance"><a href="#Wasserstein-distance" class="headerlink" title="Wasserstein-distance"></a>Wasserstein-distance</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>$$W(P_{r},P_{g}) &#x3D; \mathop{\mathbf{inf}} \limits_{ \gamma \in \Pi (P_{r},P_{g})} E_{(x,y)\in \gamma}[\Vert x-y \Vert]$$</p><p>通过定理可转化为：</p><p>$$W(P_{r},P_{g}) &#x3D;\frac{1}{K} \mathop{\mathbf{sup}} \limits_{ \Vert f \Vert_{L}\leq K} E_{x\in P_{r}}[f(x)] - E_{x\in P_{g}}[f(x)]$$</p><p>这里的$f(x)$就是生成对抗神经网络的判别器$D$，约束为满足<code>Lipschitz</code>条件，即：</p><p>$$\vert f(x_{1}) - f(x_{2}) \vert \leq K \vert x_{1} - x_{2} \vert $$</p><p>为了满足这个条件，在判别器的损失函数中增加项：</p><p>$$\lambda(\Vert \nabla_{\hat x}D_{w}(\hat x) \Vert_{2}-1) $$</p><span id="more"></span>]]></content>
+      
+      
+      <categories>
+          
+          <category> GAN </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MATLAB绘制三维柱状热图（二维热图的三维化）</title>
       <link href="/2024/05/16/3D-plot/"/>
       <url>/2024/05/16/3D-plot/</url>
